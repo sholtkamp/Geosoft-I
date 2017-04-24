@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Sebastian Holtkamp, Malte Tiemann" >
-        <meta .... >
+        <meta name="author" content="Sebastian Holtkamp, 406724, s_holt19@uni-muenster.de" >
+        <meta name="author" content="Malte Tiemann, ...." >
         <title>Geosoftware I</title>
     </head>
 
@@ -13,28 +13,29 @@
 
     <body>
 
-
-        <form id="coor1">
+      <!-- Form used to enter coordinate data necessary for computation of distance;
+      Contains initialized data for example computation-->
+        <form id="coords">
             Latitude 1: <br>
-            <input type="number" id="lat1"><br>
+            <input type="number" id="lat1" value = 15><br>
             Longitude 1: <br>
-            <input type="number" id="long1"><br>
-        </form>
-
-        <br><br>
-
-        <form id="coor2">
-            Latitude 2: <br>
-            <input type="number" id="lat2"><br>
-            Longitude 2: <br>
-            <input type="number" id="long2"><br>
+            <input type="number" id="long1" value = 30><br>
             <br>
+            Latitude 2: <br>
+            <input type="number" id="lat2" value = 130><br>
+            Longitude 2: <br>
+            <input type="number" id="long2" value= 20><br>
         </form>
 
-        <br><br>
+        <p> Use provided values to compute an example distance or enter new input! </p>
+        <br>
 
-        <button type="submit" onClick="submitter">Submit!</button>
-        <button type="button" onClick="CalculateCoords">Calculate Distance!</button>
+        <!-- Button used to call JS-function CalculateCoords specified in script.js -->
+        <button onclick="CalculateCoords()">Calculate Distance!</button>
+        <br>
 
+        <!-- Paragraph used to display the calculated values -->
+        <p id="results"></p>
+        
     </body>
 </html>
