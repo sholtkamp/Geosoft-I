@@ -1,6 +1,8 @@
-/**
- * Created by Basti on 24.04.2017.
+/** authors:
+ * Sebastian Holtkamp, 406724, s_holt19@uni-muenster.de
+ * Malte Tiemann, 420538, m_tiem07@uni-muenster.de
  */
+
 
 var lat1, long1, lat2, long2 = 0; //initializing variables
 
@@ -30,7 +32,8 @@ function CalculateCoords(lat1, long1, lat2, long2) {
             Math.sin(degreeLongitude / 2) * Math.sin(degreeLongitude / 2)
             ;
     var temp2 = 2 * Math.atan2(Math.sqrt(temp1), Math.sqrt(1-temp1));
-    var temp3 = radius * temp2;
+    var temp3 = radius * temp2; //temp3 = distance in km
+
     // Changes the results paragraph in the HTML doc to display the calculated distance
     document.getElementById("results").innerHTML ="The distance between the given coordinates is: " + temp3;
 }
