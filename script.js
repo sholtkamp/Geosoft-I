@@ -2,7 +2,7 @@
  * Created by Basti on 24.04.2017.
  */
 
-var lat1, long1, lat2, long2 = 0;
+var lat1, long1, lat2, long2 = 0; //initializing variables
 
 /**
  *
