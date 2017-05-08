@@ -10,7 +10,12 @@ var ReadPolyline = function(event) {
   var reader = new FileReader();
 
   reader.onload = function(){
-	var filecontent=reader.result; //coordinate data saved to this variable
+	var filecontent = reader.result; //coordinate data saved to this variable
+  filecontent = filecontent.replace ( /[^\d.\s]/g, '' ); //using regex to filter everthing non-numeric except whitespaces
+	var coordArray = filecontent.split(" ");
+	coordArray = coordArray.filter(function(entry) { return entry.trim() != ''; });
+	console.log(filecontent);
+	console.log(coordArray);
 	};
 
   reader.readAsText(input.files[0]);
