@@ -1,6 +1,6 @@
 var coordArray; //initializing Array
 var filecontent; //initializing String
-var polylength;
+var lengthArray;
 
 /**
 * @desc reads .txt File into an Array
@@ -12,24 +12,24 @@ var ReadFile = function(event) {
 	var input = event.target;
     var reader = new FileReader();
 
+
   reader.onload = function(){
-	filecontent = reader.result; //coordinate data saved to this variable
+
+      filecontent = reader.result; //coordinate data saved to this variable
       myBuildArray = new BuildArray(filecontent);
-      myBuildArray.work();
+      myBuildArray.work(); //using self defined work function; see below
 
-      for (i=0; i < coordArray.length; i = i+4) {
+      for (i=0; i < coordArray.length; i = i+4) { //iterating over array length...
 
-          myPoint = new Point(coordArray[i], coordArray[i + 1]);
+          myPoint = new Point(coordArray[i], coordArray[i + 1]); //... to build points ....
           myPoint2 = new Point(coordArray[i + 2], coordArray[i + 3]);
 
-          myLine = new Line(myPoint, myPoint2);
-          myLine.buildLine();
+          myLine = new Line(myPoint, myPoint2); //... and merge those to lines...
+          myLine.buildLine(); // using self defined build function; see below
+
           console.log(myLine.length);
       }
-
-
 	};
-
   reader.readAsText(input.files[0]);
 };
 
@@ -53,7 +53,6 @@ function BuildArray(input) {
         if(coordArray.length < 2){ // error handling for empty .txt. files
             throw "File does not contain coordinates!";
         }
-
     }
 }
 
@@ -110,21 +109,21 @@ function degree2radians(degree){
  *              and a number of methods, e.g.:
  *              addLineToArray // addLineLength, depending on approach
  *              sumLineLengths, getLength, ...
- *
- * @param none
- * @method addLineToArray // addLineLength
- * @method getLength
  * @method sumOfPartialLengths
- * @method ...
  */
 function Polyline(){
 
     //attribute
     this.length = 0;
 
-    function sumOfPartialLengths(line){
+    function sumOfPartialLengths(line){}
 
-    }
+
 }
 
 
+/**
+ // Changes the results paragraph in the HTML doc to display the calculated distance
+ document.getElementById("results").innerHTML ="The distance between the given coordinates is: " + temp3;
+
+ **/
