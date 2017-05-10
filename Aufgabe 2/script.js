@@ -1,32 +1,21 @@
-/**
-desired way to use filters
-
-function filterInput(content){
-	this.content = filecontent;
-	filecontent = filecontent.replace( /^\D+/g, ''); //using regex to filter all leading non-numerals
-  filecontent = filecontent.replace( /[^\d.\s]/g, ''); //using regex to filter everthing non-numeric except whitespaces
-	filecontent = filecontent.replace( /(\r\n|\n|\r)/gm,""); // using regex filter to filter all linebreaks
-}
-**/
-
+var coordArray; //initializing Array
 
 /**
-* @desc Create a polyline, add lines read from a given
-        file and insert the full length in the HTML document
+* @desc reads .txt File into an Array
 * @see Learnweb
 * @param event OpenFile event
 */
-var ReadPolyline = function(event) {
+var ReadFile = function(event) {
 
 	var input = event.target;
   var reader = new FileReader();
 
   reader.onload = function(){
 	var filecontent = reader.result; //coordinate data saved to this variable
-  //filecontent.filterInput(filecontent);  SO
+  //filecontent.filterInput(filecontent);  SIEHE UNTEN
 	filecontent = filecontent.replace( /^\D+/g, ''); //using regex to filter all leading non-numerals
-  filecontent = filecontent.replace( /[^\d.\s]/g, ''); //using regex to filter everthing non-numeric except whitespaces
-	filecontent = filecontent.replace( /(\r\n|\n|\r)/gm,""); // using regex filter to filter all linebreaks
+  filecontent = filecontent.replace( /\n/g, " " ); // using regex to change linebreaks to whitespaces
+	filecontent = filecontent.replace( /[^\d.\s]/g, ''); //using regex to filter everthing non-numeric except whitespaces
 
 	var coordArray = filecontent.split(" "); // using the whitespaces to split String into an array
 	coordArray = coordArray.filter(function(entry) { return entry.trim() != ''; }); // trimming the whitespaces from the array, after using them to split the String into the array
@@ -37,12 +26,29 @@ var ReadPolyline = function(event) {
   reader.readAsText(input.files[0]);
   };
 
-function Line(start, end){
+
+/**
+function Line(lat1, long1, lat2, long2){
 
     //attributes
-    this.start = filecontent[0];
-    this.end = filecontent[1];
-    console.log(line);
+    this.lat1  = coordArray[0];
+    this.long1 = coordArray[1];
+		this.lat2  = coordArray[2];
+		this.long2 = coordArray[3];
+    var length;
     //methods
 
   }
+**/
+//------------------------------------------------------------------
+
+	/**
+	desired way to use filters
+
+	function filterInput(content){
+		this.content = filecontent;
+		filecontent = filecontent.replace( /^\D+/g, ''); //using regex to filter all leading non-numerals
+	  filecontent = filecontent.replace( /[^\d.\s]/g, ''); //using regex to filter everthing non-numeric except whitespaces
+		filecontent = filecontent.replace( /(\r\n|\n|\r)/gm,""); // using regex filter to filter all linebreaks
+	}
+	**/
