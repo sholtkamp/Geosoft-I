@@ -1,6 +1,6 @@
 var coordArray; //initializing Array
 var filecontent; //initializing String
-var lengthArray;
+var lengthArray = [];
 
 /**
 * @desc reads .txt File into an Array
@@ -26,9 +26,17 @@ var ReadFile = function(event) {
 
           myLine = new Line(myPoint, myPoint2); //... and merge those to lines...
           myLine.buildLine(); // using self defined build function; see below
-
-          console.log(myLine.length);
+          lengthArray.push(myLine.length);
+          console.log(lengthArray);
       }
+
+      myPolyLine = new Polyline(lengthArray);
+      myPolyLine.partialSum();
+      // Changes the results paragraph in the HTML doc to display the calculated distance
+      document.getElementById("results").innerHTML ="The length of the polyline is is: " + myPolyLine.sum;
+      lengthArray.length = 0;
+
+
 	};
   reader.readAsText(input.files[0]);
 };
@@ -111,19 +119,22 @@ function degree2radians(degree){
  *              sumLineLengths, getLength, ...
  * @method sumOfPartialLengths
  */
-function Polyline(){
+function Polyline(lengthArray){
 
-    //attribute
-    this.length = 0;
+    //attributes
+    this.lenghtArray = lengthArray;
+    this.sum = 0;
 
-    function sumOfPartialLengths(line){}
+    //methods
+    this.partialSum = function(){
+
+        //this.lengthArray = lengthArray;
+
+        for (i = 0; i < lengthArray.length; i++){
+            this.sum = this.sum + lengthArray[i];
+        }
+        console.log(this.sum);
+    }
 
 
 }
-
-
-/**
- // Changes the results paragraph in the HTML doc to display the calculated distance
- document.getElementById("results").innerHTML ="The distance between the given coordinates is: " + temp3;
-
- **/
