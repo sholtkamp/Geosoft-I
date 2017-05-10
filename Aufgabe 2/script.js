@@ -21,10 +21,15 @@ var ReadFile = function(event) {
 	coordArray = coordArray.filter(function(entry) { return entry.trim() != ''; }); // trimming the whitespaces from the array, after using them to split the String into the array
 	console.log(filecontent);
 	console.log(coordArray);
+
+	if(coordArray.length < 1){
+		throw "File does not contain coordinates!";
+	  }
+
 	};
 
   reader.readAsText(input.files[0]);
-  };
+};
 
 
 /**
@@ -47,8 +52,6 @@ function Line(lat1, long1, lat2, long2){
 
 	function filterInput(content){
 		this.content = filecontent;
-		filecontent = filecontent.replace( /^\D+/g, ''); //using regex to filter all leading non-numerals
-	  filecontent = filecontent.replace( /[^\d.\s]/g, ''); //using regex to filter everthing non-numeric except whitespaces
-		filecontent = filecontent.replace( /(\r\n|\n|\r)/gm,""); // using regex filter to filter all linebreaks
+		filecontent = filecontent.....
 	}
 	**/
