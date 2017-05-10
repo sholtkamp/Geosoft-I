@@ -73,7 +73,6 @@ function Line(pt1, pt2){
     //attributes
     this.pt1  = pt1;
     this.pt2 = pt2;
-    var length;
 
     //methods
     this.buildLine = function(pt1, pt2){
@@ -92,13 +91,33 @@ function Line(pt1, pt2){
 
         this.length = temp3;
     }
-
-
   }
 
 // Auxiliary function used for Haversine formula
 function degree2radians(degree){
     return degree * (Math.PI/180)
+}
+
+/**
+ * @desc This is the constructor for a Polyline object.
+ *       Keep in mind: Polylines can contain 0..n lines. So the constructor does not need parameters
+ * @constructor Builds an Object with some parameters, e.g. length, arrayOfLinesInPolyline, sum...
+ *              and a number of methods, e.g.:
+ *              addLineToArray // addLineLength, depending on approach
+ *              sumLineLengths, getLength, ...
+ *
+ * @param none
+ * @method addLineToArray // addLineLength
+ * @method getLength
+ * @method sumOfPartialLengths
+ * @method ...
+ */
+function Polyline(){
+
+    //attribute
+    this.length = 0;
+
+    function addLine
 }
 
 

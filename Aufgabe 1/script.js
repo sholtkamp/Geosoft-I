@@ -42,3 +42,5 @@ function CalculateCoords(lat1, long1, lat2, long2) {
 function degree2radians(degree){
     return degree * (Math.PI/180)
 }
+
+function Polyline(line1, line2)
