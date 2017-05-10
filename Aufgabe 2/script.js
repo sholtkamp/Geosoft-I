@@ -17,12 +17,17 @@ var ReadFile = function(event) {
       myBuildArray = new BuildArray(filecontent);
       myBuildArray.work();
 
-      myPoint = new Point(coordArray[0], coordArray[1]);
-      myPoint2 = new Point(coordArray[2], coordArray[3]);
+      for (i=0; i < coordArray.length; i = i+4) {
 
-      myLine = new Line(myPoint, myPoint2);
-      myLine.buildLine();
-      console.log(myLine.length);
+          myPoint = new Point(coordArray[i], coordArray[i + 1]);
+          myPoint2 = new Point(coordArray[i + 2], coordArray[i + 3]);
+
+          myLine = new Line(myPoint, myPoint2);
+          myLine.buildLine();
+          console.log(myLine.length);
+      }
+
+
 	};
 
   reader.readAsText(input.files[0]);
@@ -117,7 +122,9 @@ function Polyline(){
     //attribute
     this.length = 0;
 
-    function addLine
+    function sumOfPartialLengths(line){
+
+    }
 }
 
 
