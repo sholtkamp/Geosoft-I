@@ -32,8 +32,9 @@ var ReadFile = function(event) {
 
       myPolyLine = new Polyline(lengthArray);
       myPolyLine.partialSum();
-      // Changes the results paragraph in the HTML doc to display the calculated distance
-      document.getElementById("results").innerHTML ="The length of the polyline is is: " + myPolyLine.sum;
+
+      // Changes the results paragraph in the HTML doc to display the calculated length
+      document.getElementById("results").innerHTML ="The length of the polyline is is: " + myPolyLine.sum + "km";
       lengthArray.length = 0;
 
 
@@ -59,7 +60,11 @@ function BuildArray(input) {
         console.log(coordArray);
 
         if(coordArray.length < 2){ // error handling for empty .txt. files
+            alert("Not enough coordinates given!");
+            document.getElementById("results").innerHTML ="The given file does not contain enough points to construct a polyline!";
+            lengthArray.length = 0;
             throw "File does not contain coordinates!";
+
         }
     }
 }
