@@ -1,9 +1,16 @@
+/**
+ * authors: Sebastian Holtkamp, 406724
+ * authors: Jan-Patrick Bollow, 349891
+ */
+
+
 var coordArray; //initializing Array
 var filecontent; //initializing String
-var lengthArray = [];
+var lengthArray = []; //initializing Array
 
 /**
-* @desc reads .txt File into an Array
+* @desc main function;
+ *      reads txt input into a string (filecontent) and calls the self defined functions to build a polyline
 * @see Learnweb
 * @param event OpenFile event
 */
@@ -24,18 +31,17 @@ var ReadFile = function(event) {
           myPoint = new Point(coordArray[i], coordArray[i + 1]); //... to build points ....
           myPoint2 = new Point(coordArray[i + 2], coordArray[i + 3]);
 
-          myLine = new Line(myPoint, myPoint2); //... and merge those to lines...
+          myLine = new Line(myPoint, myPoint2); //... and combine those to lines...
           myLine.buildLine(); // using self defined build function; see below
           lengthArray.push(myLine.length);
-          console.log(lengthArray);
       }
 
-      myPolyLine = new Polyline(lengthArray);
-      myPolyLine.partialSum();
+      myPolyLine = new Polyline(lengthArray); // builds polyline from the lines lengths stored in lengthArray
+      myPolyLine.partialSum(); // computes the total length
 
       // Changes the results paragraph in the HTML doc to display the calculated length
       document.getElementById("results").innerHTML ="The length of the polyline is is: " + myPolyLine.sum + "km";
-      lengthArray.length = 0;
+      lengthArray.length = 0; // resets the lengthArray to allow multiple computations without refresh
 
 
 	};
@@ -56,8 +62,6 @@ function BuildArray(input) {
 
         coordArray = filecontent.split(" "); // using the whitespaces to split String into an array
         coordArray = coordArray.filter(function(entry) { return entry.trim() != ''; }); // trimming the whitespaces from the array, after using them to split the String into the array
-        console.log(filecontent);
-        console.log(coordArray);
 
         if(coordArray.length < 2){ // error handling for empty .txt. files
             alert("Not enough coordinates given!");
@@ -70,9 +74,9 @@ function BuildArray(input) {
 }
 
 /**
+ * @desc point class used to construct lines
  * @param lat lattitude of given coordinate
  * @param long longitude of given coordinate
- * @constructor
  */
 function Point(lat, long){
 
@@ -82,6 +86,8 @@ function Point(lat, long){
 }
 
 /**
+ * @desc line class used to compute lengths
+ * reuses Haversine formula from assignment 1
  * @param pt1 first point constructed with coordinates
  * @param pt2 second point constructed with coordinates
  */
@@ -116,13 +122,8 @@ function degree2radians(degree){
 }
 
 /**
- * @desc This is the constructor for a Polyline object.
- *       Keep in mind: Polylines can contain 0..n lines. So the constructor does not need parameters
- * @constructor Builds an Object with some parameters, e.g. length, arrayOfLinesInPolyline, sum...
- *              and a number of methods, e.g.:
- *              addLineToArray // addLineLength, depending on approach
- *              sumLineLengths, getLength, ...
- * @method sumOfPartialLengths
+ * @desc polyline class used to build polylines from line lengths
+ * @method partialSum computes the length of the poly line
  */
 function Polyline(lengthArray){
 
@@ -135,10 +136,9 @@ function Polyline(lengthArray){
 
         //this.lengthArray = lengthArray;
 
-        for (i = 0; i < lengthArray.length; i++){
+        for (i = 0; i < lengthArray.length; i++){   //iterates over the lengthArray and sums it up to compute complete length
             this.sum = this.sum + lengthArray[i];
         }
-        console.log(this.sum);
     }
 
 
