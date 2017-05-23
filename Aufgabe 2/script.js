@@ -3,10 +3,16 @@
  * authors: Jan-Patrick Bollow, 349891
  */
 
-
 var coordArray; //initializing Array
 var filecontent; //initializing String
 var lengthArray = []; //initializing Array
+
+/**
+ * initializing the logger
+ */
+var logger = JL();
+var consoleAppender = JL.createConsoleAppender('consoleAppender');
+logger.setOptions({"appenders": [consoleAppender]});
 
 /**
 * @desc main function;
@@ -19,14 +25,13 @@ var ReadFile = function(event) {
 	var input = event.target;
     var reader = new FileReader();
 
-
   reader.onload = function(){
 
       filecontent = reader.result; //coordinate data saved to this variable
       myBuildArray = new BuildArray(filecontent);
       myBuildArray.work(); //using self defined work function; see below
 
-      for (i=0; i < coordArray.length; i = i+4) { //iterating over array length...
+      for (i=0; i < coordArray.length-2; i = i+2) { //iterating over array length...
 
           myPoint = new Point(coordArray[i], coordArray[i + 1]); //... to build points ....
           myPoint2 = new Point(coordArray[i + 2], coordArray[i + 3]);
@@ -34,6 +39,7 @@ var ReadFile = function(event) {
           myLine = new Line(myPoint, myPoint2); //... and combine those to lines...
           myLine.buildLine(); // using self defined build function; see below
           lengthArray.push(myLine.length);
+          JL("lengthArray_log").debug(lengthArray); //logging chordArray after iteration problems
       }
 
       myPolyLine = new Polyline(lengthArray); // builds polyline from the lines lengths stored in lengthArray
@@ -43,6 +49,7 @@ var ReadFile = function(event) {
       document.getElementById("results").innerHTML ="The length of the polyline is is: " + myPolyLine.sum + "km";
       lengthArray.length = 0; // resets the lengthArray to allow multiple computations without refresh
 
+      JL("full_check").warn("works completely!"); //logs whether the whole script runs
 
 	};
   reader.readAsText(input.files[0]);
@@ -64,9 +71,9 @@ function BuildArray(input) {
         coordArray = coordArray.filter(function(entry) { return entry.trim() != ''; }); // trimming the whitespaces from the array, after using them to split the String into the array
 
         if(coordArray.length < 2){ // error handling for empty .txt. files
-            alert("Not enough coordinates given!");
             document.getElementById("results").innerHTML ="The given file does not contain enough points to construct a polyline!";
             lengthArray.length = 0;
+            JL("empty_file_check").fatalException("There are not enough coordinates in the uploaded file!"); //throws a fatal exception for empty .txt files
             throw "File does not contain coordinates!";
 
         }
@@ -138,6 +145,7 @@ function Polyline(lengthArray){
 
         for (i = 0; i < lengthArray.length; i++){   //iterates over the lengthArray and sums it up to compute complete length
             this.sum = this.sum + lengthArray[i];
+            JL("Partial_sum_log").debug(this.sum); //logs the partial sums to allow better understanding of the process
         }
     }
 
