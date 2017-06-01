@@ -39,7 +39,7 @@ var ReadFile = function(event) {
           myLine = new Line(myPoint, myPoint2); //... and combine those to lines...
           myLine.buildLine(); // using self defined build function; see below
           lengthArray.push(myLine.length);
-          JL("lengthArray_log").debug(lengthArray); //logging chordArray after iteration problems
+          //JL("lengthArray_log").debug(lengthArray); //logging chordArray after iteration problems
       }
 
       myPolyLine = new Polyline(lengthArray); // builds polyline from the lines lengths stored in lengthArray
@@ -101,7 +101,7 @@ function Point(lat, long){
 function Line(pt1, pt2){
 
     //attributes
-    this.pt1  = pt1;
+    this.pt1 = pt1;
     this.pt2 = pt2;
 
     //methods
@@ -141,11 +141,9 @@ function Polyline(lengthArray){
     //methods
     this.partialSum = function(){
 
-        //this.lengthArray = lengthArray;
-
         for (i = 0; i < lengthArray.length; i++){   //iterates over the lengthArray and sums it up to compute complete length
             this.sum = this.sum + lengthArray[i];
-            JL("Partial_sum_log").debug(this.sum); //logs the partial sums to allow better understanding of the process
+            //JL("Partial_sum_log").debug(this.sum); //logs the partial sums to allow better understanding of the process
         }
     }
 

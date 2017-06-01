@@ -70,6 +70,12 @@ function BuildArray(input) {
         coordArray = filecontent.split(" "); // using the whitespaces to split String into an array
         coordArray = coordArray.filter(function(entry) { return entry.trim() != ''; }); // trimming the whitespaces from the array, after using them to split the String into the array
 
+        /**
+         * as the RegEx expressions filter all non-numerals
+         * numerals are left in the array in the beginning
+         * such as 1. and 2. from the coordinate format comments
+         * these are getting shifted out of the array in the following while loop
+         */
         while (coordArray[0].length <=3) {
             coordArray.shift();
             }
