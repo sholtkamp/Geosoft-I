@@ -15,6 +15,16 @@ var consoleAppender = JL.createConsoleAppender('consoleAppender');
 logger.setOptions({"appenders": [consoleAppender]});
 
 /**
+ * initializing the Leaflet map
+ */
+var map = L.map('map');
+var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 12, attribution: osmAttrib})
+map.setView([51.961, 7.618], 13);
+map.addLayer(osm);
+
+/**
 * @desc main function;
  *      reads txt input into a string (filecontent) and calls the self defined functions to build a polyline
 * @see Learnweb
@@ -156,6 +166,6 @@ function Polyline(lengthArray){
             //JL("Partial_sum_log").debug(this.sum); //logs the partial sums to allow better understanding of the process
         }
     }
-
-
 }
+
+

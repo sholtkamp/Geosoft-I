@@ -7,18 +7,50 @@
         <meta name="author" content="Sebastian Holtkamp, 406724">
         <meta name="author" content="Jan-Patrick Bollow, 349891">
         <title>Geosoftware I</title>
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+                integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+                crossorigin=""></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+              integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+              crossorigin=""/>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-      <h1>Polyline measurements</h1>
-      <p>Please upload coordinate data below</p>
+      <h1>GeoJSON</h1>
+      <p>First we will need a GeoJSON to work with!</p>
 
+      <form id="GeoJSON_form" action="select.html">
+          <label>Feature Type:
+          <selectt name="type" size="2">
+              <option>Simple</option>
+              <option>Feature</option>
+          </selectt>
+          </label>
+          <br>
 
-      <input type='file' accept='text/plain' onchange='ReadFile(event)'>  <!-- calling the JS script -->
-      <pre id="fileDisplayArea"></pre>
+          Geometry:
+          <div id="geometry_div" >
+              <label>Geometric type:</label>
+              <selectt name="type" size="6">
+                  <option></option>
+              </selectt>
+                Coordiantes: <input type='file' accept='text/plain' onchange='ReadFile(event)'>  <!-- calling the JS script -->
+                             <pre id="fileDisplayArea"></pre>
+          </div>
+          <br>
 
+          Properties:
+          <div id="prop_div">
+               <input type="number" id="long2" value= 20><br>
+          </div>
+
+      </form>
 
     <p id="results"> </p> <!-- result displayed here -->
+
+    <div id="map"></div>
+
     </body>
 
     <script src="jsnlog.min.js"></script>
