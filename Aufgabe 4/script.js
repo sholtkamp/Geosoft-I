@@ -7,16 +7,13 @@ var coordArray; //initializing Array
 var filecontent; //initializing String
 var lengthArray = []; //initializing Array
 
-/**
- * initializing the logger
- */
+//initializing the logger
 var logger = JL();
 var consoleAppender = JL.createConsoleAppender('consoleAppender');
 logger.setOptions({"appenders": [consoleAppender]});
 
-/**
- * initializing the Leaflet map
- */
+
+//initializing the Leaflet map
 var map = L.map('map');
 var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
@@ -60,6 +57,21 @@ var ReadFile = function(event) {
       lengthArray.length = 0; // resets the lengthArray to allow multiple computations without refresh
 
       JL("full_check").warn("works completely!"); //logs whether the whole script runs
+
+      //initializing the GeoJSON
+      var geojsonFeature = {
+          "type": "Feature",
+          "properties": {
+              "name": "GeoJSON-Object",
+          },
+          "geometry": {
+              "type": "Polygon",
+              "coordinates": [coordArray[0], coordArray[1]]
+
+          }
+      };
+
+      L.geoJSON(geojsonFeature).addTo(map);
 
 	};
   reader.readAsText(input.files[0]);
@@ -167,5 +179,13 @@ function Polyline(lengthArray){
         }
     }
 }
+
+
+
+
+
+
+
+
 
 
