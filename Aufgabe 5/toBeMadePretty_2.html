@@ -7,6 +7,7 @@
 	<meta name="author" content="YourNameHere">
 	<meta name="author" content="AndYourNameHere">
 	<link rel="stylesheet" href="pretty_css.css">
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
 	<title>Aufgabe 5.1 - CSS Teil 2</title>
 </head>
 
@@ -14,13 +15,15 @@
 
 	<h1>Hallo!</h1>
 
-	<p>Puh, das war jetzt ne Menge Lobhudelei für CSS. Dabei kann Web Development auch anstrengend sein...<p>
+	<p class="txt1">Puh, das war jetzt ne Menge Lobhudelei für CSS. <br>
+		Dabei kann Web Development auch anstrengend sein... <br>
+		"Nein, nicht genug? Na dann, <a href="./toBeMadePretty_1.html">hier</a>
+		geht´s zurück zum CSS.<br>
+		Falls doch, schlage ich eine Runde WebDevBingo vor!
+	</p>
 	<br>
-	Nein, nicht genug? Na dann, <a href="./toBeMadePretty_1.html">hier</a> geht´s zurück zum CSS.
-	<br>
-	<p>Falls doch, schlage ich eine Runde WebDevBingo vor!<p>
 
-
+	<div id="bingo">
 	<table>	
 		<tr>
 			<th>WEB</th>
@@ -43,8 +46,19 @@
 			<td>You can't parse [X]HTML with RegEx (!!!)</td>
 		</tr>
 	</table>
+	</div>
 
-	<p>Über-cool wäre dieses Bingo natürlich, wenn sich auf einen Click auf ein Feld der Hintergrund ändern würde. Dann könnte man das BINGO!! auch nachvollziehen!</p>
 	<br>
-	<p>Und wenn das langweilig wird, dann kann man zum Feierabend auch auf <a href="https://9gag.com/cute" target="_blank">9GAG</a> reinschauen. Wohlverdient.<p>
+	<p class="txt1">Über-cool wäre dieses Bingo natürlich,
+		wenn sich auf einen Click auf ein Feld der Hintergrund ändern würde. <br>
+		Dann könnte man das BINGO!! auch nachvollziehen!</p>
+
+	<p class="txt1">Und wenn das langweilig wird, dann kann man zum Feierabend auch auf <a href="https://9gag.com/cute" target="_blank">9GAG</a> reinschauen. Wohlverdient.<p>
 </body>
+<script>
+    jQuery('#bingo td').click(function() {
+        $(this).css('backgroundColor', '#000');
+    });
+</script>
+
+</html>

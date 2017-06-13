@@ -11,5 +11,7 @@
     <orderEntry type="library" name="jsnlog" level="application" />
     <orderEntry type="library" name="leaflet" level="application" />
     <orderEntry type="library" name="leaflet" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="jquery-latest" level="application" />
   </component>
 </module>

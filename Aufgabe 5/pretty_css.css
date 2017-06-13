@@ -1,5 +1,5 @@
 body {
-    background-image: url("http://i.imgur.com/Nbi7bYI.jpg");
+    background-image: url("background_light.jpg");
 }
 
 h1 {
@@ -34,29 +34,54 @@ h3 {
     color: rgb(68, 71, 76);
     padding: 16px;
     font-size: 16px;
-    min-width: 50%;
+    min-width: 20%;
 }
 
-.link_1 {
+#bingo {
     font-family: Arial, Helvetica, sans-serif;
+    color: rgb(68, 71, 76);
     font-size: 15px;
+    width: 80%;
 }
 
-/* building dropdown menu using modified W3Schools code
-   source:  https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_button
- */
-
-.dropbtn {
-    border: rgb(68, 71, 76) solid 3px;
-    background: rgba(255, 255, 255, 0.7) ;
-    color: rgba(68, 71, 76, 1.0);
-    padding: 16px;
-    font-size: 16px;
-    cursor: pointer;
-    min-width: 160px;
+#bingo td {
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 15px;
 }
-.dropdown {
-    position: relative;
+
+#bingo th {
+    text-align: center;
+}
+
+#nav_bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav_li {
+    float: left;
+    display: inline-block;
+    border-right: 1px solid #bbb;
+   }
+
+li a, .dropbtn {
+    display: inline-block;
+    color: rgb(68, 71, 76);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(255, 255, 255, 1.0);
+}
+
+li.dropdown {
     display: inline-block;
 }
 
@@ -69,13 +94,12 @@ h3 {
     z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content a{
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(68, 71, 76);
-    font-size: 15px;
+    text-align: left;
 }
 
 .dropdown-content a:hover {background-color: #f1f1f1}
@@ -84,6 +108,3 @@ h3 {
     display: block;
 }
 
-.dropdown:hover .dropbtn {
-    background-color: rgba(255, 255, 255, 1.0);
-}
