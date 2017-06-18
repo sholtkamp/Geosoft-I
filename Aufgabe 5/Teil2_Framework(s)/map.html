@@ -8,16 +8,28 @@
     <meta name="author" content="--------------------------">
     <title>Map</title>
 
-    <!-- Bootstrap-->
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+          integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+          crossorigin=""/>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+            integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+            crossorigin=""></script>
 
 <body>
 
+<!-- Using Bootstraps navbar to display side navigation
+ source: https://getbootstrap.com/components/#navbar (modified)-->
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,6 +55,37 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+<div class="row">
+
+    <div class="col-sm-6">
+        <!-- Leaflet usage to display user's current location-->
+        <div id="mapid" style="height: 400px; width: 400px;"></div>
+        <br>
+
+        <!-- Button used for user locating -->
+        <button type="button" class="btn btn-default" aria-label="Left Align" onclick="locateUser()">
+            <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Find me!
+        </button>
+    </div>
+
+    <div class="col-sm-6">
+    <!-- Form used for external GeoJSON -->
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Use external GeoJSON...">
+
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button" onclick="loadGeoJSON">Load GeoJSON</button>
+            </span>
+
+        </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+
+
+</div> <!-- class row -->
+
 </body>
+<!-- Personal Leaflet JS-Script -->
+<script src="map_script.js" ></script>
 </html>
 
