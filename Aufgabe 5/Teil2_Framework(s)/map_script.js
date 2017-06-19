@@ -30,3 +30,10 @@ function locateUser(){
 function loadGeoJSON(){
 
 };
+
+/**
+ * Funtion used for resizing map
+ */
+$mapid.on('map-container-resize', function () {
+    map.invalidateSize(); // doesn't seem to do anything
+});
