@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <!-- Leaflet Draw -->
-    <script src="https://raw.githubusercontent.com/Leaflet/Leaflet.draw/master/src/Leaflet.draw.js"></script>
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -35,7 +33,7 @@
 
 <body>
 
-<!-- Using Bootstraps navbar to display side navigation
+<!-- Using Bootstrap navbar to display site navigation
  source: https://getbootstrap.com/components/#navbar (modified)-->
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -65,37 +63,34 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<div class="row">
+<div class="container">
 
-    <div id = "draggable2" class = "ui-widget-content">
-    <div class="col-sm-3">
-        <!-- Leaflet usage to display user's current location-->
-        <div class="col-md-6" id="mapid"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <div id="draggable2" class="ui-widget-content">
+                <div id="map" ></div> <!-- Leaflet usage to display user's current location-->
+                <button id="find_btn" type="button" class="btn btn-primary btn-lg btn-block" aria-label="Left Align" onclick="locateUser()">
+                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Find me!
+                </button> <!-- Button used for user locating -->
+            </div>
+        </div> <!-- End of div col -->
+    </div> <!-- End of div row -->
 
+    <div class="row">
+        <div class="col-md-6">
+            <div id="draggable" class="ui-widget-content"> <!-- Form used for external GeoJSON -->
+             <div  id="gJ" class="input-group">
+                  <input id="JSON_URL" type="text" class="form-control" placeholder="Use external GeoJSON...">
+                  <span class="input-group-btn">
+                  <button class="btn btn-default" type="button" onclick="loadGeoJSON()">Load GeoJSON</button>
+                  </span>
+              </div>
+            </div>
+        </div> <!-- End of div col -->
+    </div> <!-- End of div row -->
 
-        <!-- Button used for user locating -->
-        <button id="find_btn" type="button" class="btn btn-primary btn-lg btn-block" aria-label="Left Align" onclick="locateUser()">
-            <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Find me!
-        </button>
-        <br>
-    </div>
-    </div>
+</div> <!-- End of div container -->
 
-    <div id = "draggable" class = "ui-widget-content">
-    <div class="col-md-5">
-    <!-- Form used for external GeoJSON -->
-        <div  id="gJ" class="input-group">
-            <input id="JSON_URL" type="text" class="form-control" placeholder="Use external GeoJSON...">
-
-            <span class="input-group-btn">
-            <button class="btn btn-default" type="button" onclick="loadGeoJSON()">Load GeoJSON</button>
-            </span>
-
-        </div><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
-    </div>
-
-</div> <!-- class row -->
 
 </body>
 <!-- Personal Leaflet JS-Script -->

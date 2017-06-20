@@ -2,45 +2,40 @@ body {
     background-image: url("background_light.jpg");
 }
 
-#mapid {
-width: 100%;
-max-width: 400px;
-height: 400px;
-position: relative;
-top: 0;
-left: 10px;
-
-transition: height 0.5s ease-in-out;
+html, body {
+    height : 100%;
 }
 
+/** map page */
+#map {
+    height:50vw;
+    max-height: 600px;
+    width:50vw;
+    max-width: 600px;
+}
+
+#find_btn {
+    top: 10px;
+}
+
+#move {
+    margin-right: 10px;
+}
+
+/* main page */
 #globe_pic {
     max-height: 20%;
     max-width: 20%;
 }
 
-.container_main {
+.mainpage_container {
     position: relative;
     top: 10px;
     left: 10px;
 }
 
-#find_btn {
-    position: relative;
-    left: 10px;
-    top: 10px;
-    right: 10px;
-}
-
-#gJ { /* GeoJSON bar */
-    position: relative;
-    left: 10px;
-    right: 10px;
-}
-
+/* imprint */
 #imp {
     text-align: center;
 }
 
-#move{
-    margin-right: 10px;
-}
