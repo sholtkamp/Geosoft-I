@@ -1,6 +1,6 @@
 //Initializing Leaflet map
 
-var map = L.map('mapid');
+var map = L.map('mapid', {drawControl: true});
 var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
 var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 12, attribution: osmAttrib})
@@ -28,12 +28,29 @@ function locateUser(){
 })};
 
 function loadGeoJSON(){
+    var exGeoJSON = new L.geoJson();
+    exGeoJSON.addTo(map);
+    var JSON_src = document.getElementById("JSON_URL").value;
+    console.log(JSON_src),
 
+    $.ajax({
+        dataType: "json",
+        url: JSON_src,
+        success: function(data) {
+            $(data.features).each(function(key, data) {
+                exGeoJSON.addData(data);
+            });
+        }
+    }).error(function() {});
 };
 
 /**
  * Funtion used for resizing map
  */
-$mapid.on('map-container-resize', function () {
+$(map).on('map-container-resize', function () {
     map.invalidateSize(); // doesn't seem to do anything
 });
+
+
+
+
