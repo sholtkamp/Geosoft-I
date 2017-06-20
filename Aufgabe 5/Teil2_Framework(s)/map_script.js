@@ -31,7 +31,6 @@ function loadGeoJSON(){
     var exGeoJSON = new L.geoJson();
     exGeoJSON.addTo(map);
     var JSON_src = document.getElementById("JSON_URL").value;
-    console.log(JSON_src),
 
     $.ajax({
         dataType: "json",
@@ -51,6 +50,19 @@ $(map).on('map-container-resize', function () {
     map.invalidateSize(); // doesn't seem to do anything
 });
 
+function moveMap() {
+    $(function () {
+        $("#draggable, #draggable2").draggable();
+    });
+}
+
+function snapMap() {
+    $(function () {
+        $("#draggable, #draggable2").draggable({
+            disabled:true
+        });
+    });
+}
 
 
 
