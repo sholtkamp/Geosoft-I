@@ -8,14 +8,11 @@ html, body {
 
 /** map page */
 #map {
+    position: absolute;
     height:50vw;
     max-height: 600px;
     width:50vw;
     max-width: 600px;
-}
-
-#find_btn {
-    top: 10px;
 }
 
 #move {

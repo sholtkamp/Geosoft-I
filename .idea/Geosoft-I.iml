@@ -14,11 +14,13 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="jquery-latest" level="application" />
-    <orderEntry type="library" name="leaflet.ajax" level="application" />
     <orderEntry type="library" name="Leaflet.draw" level="application" />
     <orderEntry type="library" name="jquery-1.12.4" level="application" />
     <orderEntry type="library" name="jquery-ui" level="application" />
     <orderEntry type="library" name="Leaflet.draw" level="application" />
     <orderEntry type="library" name="leaflet.draw" level="application" />
+    <orderEntry type="library" name="leaflet.draw" level="application" />
+    <orderEntry type="library" name="jquery-ui" level="application" />
+    <orderEntry type="library" name="jquery-1.12.4" level="application" />
   </component>
 </module>

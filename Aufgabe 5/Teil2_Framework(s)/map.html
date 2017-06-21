@@ -68,31 +68,28 @@
 </nav>
 
 <div class="container">
-
-    <div class="row">
-        <div class="col-md-6">
-            <div id="draggable2" class="ui-widget-content">
+<div class="row">
+    <div class="col-xs-6">
+        <div id="draggable2" class="ui-widget-content">
                 <div id="map" ></div> <!-- Leaflet usage to display user's current location-->
-                <button id="find_btn" type="button" class="btn btn-primary btn-lg btn-block" aria-label="Left Align" onclick="locateUser()">
-                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Find me!
-                </button> <!-- Button used for user locating -->
-            </div>
-        </div> <!-- End of div col -->
-    </div> <!-- End of div row -->
+        </div>
+    </div>
 
-    <div class="row">
-        <div class="col-md-6">
-            <div id="draggable" class="ui-widget-content"> <!-- Form used for external GeoJSON -->
+    <div class="col-sxs-6 col-xs-offset-7">
+        <div id="draggable" class="ui-widget-content"> <!-- Form used for external GeoJSON -->
              <div  id="gJ" class="input-group">
                   <input id="JSON_URL" type="text" class="form-control" placeholder="Use external GeoJSON...">
                   <span class="input-group-btn">
                   <button class="btn btn-default" type="button" onclick="loadGeoJSON()">Load GeoJSON</button>
                   </span>
-              </div>
-            </div>
-        </div> <!-- End of div col -->
-    </div> <!-- End of div row -->
+             </div> <!-- End of div col -->
+                 <button id="find_btn" type="button" class="btn btn-primary btn-lg btn-block col-sm-3" aria-label="Left Align" onclick="locateUser()">
+                     <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Find me!
+                 </button> <!-- Button used for user locating -->
+        </div>
+    </div>
 
+</div> <!-- End of div row -->
 </div> <!-- End of div container -->
 
 
