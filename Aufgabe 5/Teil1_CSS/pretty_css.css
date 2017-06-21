@@ -1,5 +1,6 @@
 body {
     background-image: url("background_light.jpg");
+   /*Background gives modern look */
 }
 
 h1 {
@@ -35,6 +36,7 @@ h3 {
     padding: 16px;
     font-size: 16px;
     min-width: 20%;
+    /* combination of transparency and border gives modern look similar to windows aero themes */
 }
 
 #bingo {
@@ -54,6 +56,7 @@ h3 {
     text-align: center;
 }
 
+/* styling a navbar without usage of frameworks */
 #nav_bar {
     list-style-type: none;
     margin: 0;
@@ -68,6 +71,7 @@ h3 {
     border-right: 1px solid #bbb;
    }
 
+/* building dropdown menu and integrating the dropdown menu into navbar */
 li a, .dropbtn {
     display: inline-block;
     color: rgb(68, 71, 76);

@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="YourNameHere">
-	<meta name="author" content="AndYourNameHere">
+	<meta name="author" content="Sebastian Holtkamp, 406724">
+	<meta name="author" content="Jan Michel Tebrügge">
 	<link rel="stylesheet" href="pretty_css.css">
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
 	<title>Aufgabe 5.1 - CSS Teil 2</title>
@@ -13,12 +13,28 @@
 
 <body>
 
+<div id="nav_bar">  <!-- navbar gibes optical order and bundles navigational functions for ease of use -->
+    <ul>
+    <ul>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Mehr Infos</a>
+            <div class="dropdown-content">
+                <a href="https://www.w3schools.com/css/default.asp" target="_blank">W3C - CSS</a>
+                <a href="https://www.w3schools.com/html/default.asp" target="_blank">W3C - HTML</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS" target="_blank">Mozilla - Introduction to CSS</a>
+                <a href="http://www.csstutorial.net/" target="_blank">CSSTutorial.net</a>
+                <a href="https://www.tutorialspoint.com/css/" target="_blank">tutorialspoint</a>
+            </div>
+        </li>
+        <li class="nav_li"><a href="./toBeMadePretty_1.html">Zurück zu CSS?</a></li>
+    </ul>
+</div>
+
 	<h1>Hallo!</h1>
 
 	<p class="txt1">Puh, das war jetzt ne Menge Lobhudelei für CSS. <br>
 		Dabei kann Web Development auch anstrengend sein... <br>
-		"Nein, nicht genug? Na dann, <a href="./toBeMadePretty_1.html">hier</a>
-		geht´s zurück zum CSS.<br>
+		"Nein, nicht genug? Na dann, oben geht´s zurück zum CSS.<br>
 		Falls doch, schlage ich eine Runde WebDevBingo vor!
 	</p>
 	<br>
@@ -55,8 +71,12 @@
 
 	<p class="txt1">Und wenn das langweilig wird, dann kann man zum Feierabend auch auf <a href="https://9gag.com/cute" target="_blank">9GAG</a> reinschauen. Wohlverdient.<p>
 </body>
+
 <script>
-    jQuery('#bingo td').click(function() {
+    /**
+     * Function uses JQuery to change color of clicked bingo fields
+     */
+    $('#bingo td').click(function() {
         $(this).css('backgroundColor', '#000');
     });
 </script>

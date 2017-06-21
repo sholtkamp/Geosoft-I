@@ -1,3 +1,8 @@
+/**
+ * @author Sebastian Holtkamp
+ * @author Jan Michel Tebrügge
+ */
+
 //Initializing Leaflet map
 var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
@@ -12,6 +17,7 @@ map.addLayer(drawnItems);
 
 /**
  * Using Leaflet Draw to implement drawing on map
+ * @source: https://github.com/Leaflet/Leaflet.draw
  */
 var drawControl = new L.Control.Draw({
     edit: {
@@ -21,8 +27,8 @@ var drawControl = new L.Control.Draw({
 map.addControl(drawControl);
 
 /**
- * Function used to export GeoJSON file from
- * drawn features
+ * Function used to export GeoJSON file of drawn features
+ * @source: https://bl.ocks.org/danswick/d30c44b081be31aea483
  */
 map.on('draw:created', function(e) {
 
@@ -30,22 +36,20 @@ map.on('draw:created', function(e) {
     drawnItems.addLayer(e.layer);
 });
 
-// on click, clear all layers
-document.getElementById('delete').onclick = function(e) {
-    drawnItems.clearLayers();
-};
+function exportGeoJSON(){
 
-document.getElementById('export').onclick = function(e) {
-    // Extract GeoJson from featureGroup
-    var data = drawnItems.toGeoJSON();
+    document.getElementById('export').onclick = function(e) {
+        // Extract GeoJson from featureGroup
+        var data = drawnItems.toGeoJSON();
 
-    // Stringify the GeoJson
-    var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
+        // Stringify the GeoJson
+        var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
 
-    // Create export
-    document.getElementById('export').setAttribute('href', 'data:' + convertedData);
-    document.getElementById('export').setAttribute('download','data.geojson');
-};
+        // Create export
+        document.getElementById('export').setAttribute('href', 'data:' + convertedData);
+        document.getElementById('export').setAttribute('download','data.geojson');
+    };
+}
 
 //adding specified marker to map
 var dom_marker = L.marker([51.962981, 7.625772]);
@@ -56,11 +60,17 @@ dom_marker.bindPopup("Muenster Dom<br> Built in 13th century. <br/><img src='htt
  * function used to locate user
  * this function is called from the #find_btn
  * located the user, sets a marker at his position and opens a popup
+ *
+ * If user can't be found an alert is displayed
  */
 function locateUser(){
     map.locate({setView: true, watch: true})
         .on('locationfound', function(e){
             var marker = L.marker([e.latitude, e.longitude]).bindPopup('Found you!');
+
+            if (typeof marker == "undefined") {
+                alert("Can't find you");
+            }
 
     map.addLayer(marker);
     marker.openPopup();
@@ -71,6 +81,7 @@ function locateUser(){
  * uses Leaflet's L.geoJson method to add data to map
  * source is specified in the form and function called at click on the button
  * uses JQuery Ajax to load the data
+ * @source: https://gis.stackexchange.com/questions/68489/how-to-load-external-geojson-file-into-leaflet-map
  */
 function loadGeoJSON(){
     var exGeoJSON = new L.geoJson();
@@ -83,42 +94,15 @@ function loadGeoJSON(){
         success: function(data) {
             $(data.features).each(function(key, data) {
                 exGeoJSON.addData(data);
+                console.log(data);
             });
         }
     }).error(function() {});
 }
 
-
-/**
- * Functions used to active and deactivate the draggable property of JQueryUI
- */
-function moveMap() {
-    $(function () {
-        $("#draggable, #draggable2").draggable({
-            disabled: false
-        });
-        $( "#map" ).resizable({
-            disabled: false,
-            alsoResizeReverse: "#draggable"
-        });
-    });
-}
-
-function snapMap() {
-    $(function () {
-        $("#draggable, #draggable2").draggable({
-            disabled: true
-        });
-        $( "#map" ).resizable({
-            disabled: true,
-            alsoResizeReverse: false
-        });
-    });
-}
-
 /**
  * "gegeinander draggen" implementation
- * source: Simen Echholt, https://stackoverflow.com/questions/3369045/jquery-ui-resizable-alsoresize-reverse
+ * @source: Simen Echholt, https://stackoverflow.com/questions/3369045/jquery-ui-resizable-alsoresize-reverse
  */
 $.ui.plugin.add("resizable", "alsoResizeReverse", {
 
@@ -167,4 +151,34 @@ $.ui.plugin.add("resizable", "alsoResizeReverse", {
     stop: function() {
         $(this).removeData("resizable-alsoresize-reverse");
     }
+});
+
+/**
+ * Functions used to active and deactivate the draggable property of JQueryUI
+ */
+function moveMap() {
+    $(function () {
+        $( "#map" ).resizable({
+            disabled: false,
+            alsoResizeReverse: "#draggable, #find_btn, #export"
+        });
+        console.log("Movable");
+    });
+}
+
+function snapMap() {
+    $(function () {
+        $( "#map" ).resizable({
+            disabled: true,
+            alsoResizeReverse: false
+        });
+        console.log("Not movable");
+    });
+}
+
+/**
+ logging documents readiness
+ */
+$( document ).ready(function() {
+    console.log( "ready!" );
 });
