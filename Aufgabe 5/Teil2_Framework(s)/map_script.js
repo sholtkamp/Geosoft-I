@@ -1,33 +1,56 @@
 //Initializing Leaflet map
-var map = L.map('map');
 var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+
 var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 12, attribution: osmAttrib})
+var drawnItems = new L.FeatureGroup();
+
+var map = L.map('map');
 map.setView([51.961, 7.618], 13);
 map.addLayer(osm);
-var drawnItems = new L.FeatureGroup();
 map.addLayer(drawnItems);
+
+/**
+ * Using Leaflet Draw to implement drawing on map
+ */
 var drawControl = new L.Control.Draw({
     edit: {
         featureGroup: drawnItems
     }
 });
 map.addControl(drawControl);
-map.on(L.Draw.Event.CREATED, function (e) {
-    var type = e.layerType
-    var layer = e.layer;
 
-//insert layer to geojson
+/**
+ * Function used to export GeoJSON file from
+ * drawn features
+ */
+map.on('draw:created', function(e) {
 
-    drawnItems.addLayer(layer);
+    // Each time a feature is created, it's added to the over arching feature group
+    drawnItems.addLayer(e.layer);
 });
 
+// on click, clear all layers
+document.getElementById('delete').onclick = function(e) {
+    drawnItems.clearLayers();
+};
 
+document.getElementById('export').onclick = function(e) {
+    // Extract GeoJson from featureGroup
+    var data = drawnItems.toGeoJSON();
+
+    // Stringify the GeoJson
+    var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
+
+    // Create export
+    document.getElementById('export').setAttribute('href', 'data:' + convertedData);
+    document.getElementById('export').setAttribute('download','data.geojson');
+};
 
 //adding specified marker to map
-var dommarker = L.marker([51.962981, 7.625772]);
-dommarker.addTo(map);
-dommarker.bindPopup("Muenster Dom<br> Built in 13th century. <br/><img src='https://www.muenster-photos.de/cms/fileadmin/_processed_/csm_domplatz2_712f453299.jpg'/ width='100%'><br>Domplatz 28, 48143 Muenster");
+var dom_marker = L.marker([51.962981, 7.625772]);
+dom_marker.addTo(map);
+dom_marker.bindPopup("Muenster Dom<br> Built in 13th century. <br/><img src='https://www.muenster-photos.de/cms/fileadmin/_processed_/csm_domplatz2_712f453299.jpg'/ width='100%'><br>Domplatz 28, 48143 Muenster");
 
 /**
  * function used to locate user
