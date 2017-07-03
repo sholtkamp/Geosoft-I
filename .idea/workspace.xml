@@ -17,18 +17,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="map_script.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Aufgabe 5/Teil2_Framework(s)/map_script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1734">
-              <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,6 +27,11 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>export</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,9 +65,9 @@
         <option value="$PROJECT_DIR$/Aufgabe 5/Teil1_CSS/toBeMadePretty_2.html" />
         <option value="$PROJECT_DIR$/Aufgabe 5/Teil1_CSS/toBeMadePretty_1.html" />
         <option value="$PROJECT_DIR$/Aufgabe 5/Teil2_Framework(s)/frame_css.css" />
-        <option value="$PROJECT_DIR$/Aufgabe 5/Teil2_Framework(s)/map_script.js" />
         <option value="$PROJECT_DIR$/Aufgabe 5/Teil2_Framework(s)/UI_script.js" />
         <option value="$PROJECT_DIR$/Aufgabe 5/Teil2_Framework(s)/map.html" />
+        <option value="$PROJECT_DIR$/Aufgabe 5/Teil2_Framework(s)/map_script.js" />
       </list>
     </option>
   </component>
@@ -84,10 +78,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -107,6 +100,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -119,22 +113,8 @@
               <option name="myItemId" value="Geosoft-I" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Geosoft-I" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Geosoft-I" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Aufgabe 5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Teil2_Framework(s)" />
+              <option name="myItemId" value="Aufgabe 6" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -145,20 +125,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Geosoft-I" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Aufgabe 5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Teil1_CSS" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -168,15 +139,17 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Basti\Documents\GitHub\Geosoft-I\Aufgabe 5\Teil2_Framework(s)\screenshots" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Basti\Documents\GitHub\Geosoft-I\Aufgabe 6" />
       <recent name="C:\Users\Basti\Documents\GitHub\Geosoft-I\Aufgabe 5" />
       <recent name="C:\Users\Basti\Documents\GitHub\Geosoft-I" />
       <recent name="C:\Users\Basti\Documents\GitHub\Geosoft-I\Aufgabe 3" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Basti\Documents\GitHub\Geosoft-I\Aufgabe 5\Teil2_Framework(s)\screenshots" />
     </key>
   </component>
   <component name="RunManager">
@@ -280,33 +253,34 @@
       <workItem from="1498059803462" duration="91000" />
       <workItem from="1498059976440" duration="580000" />
       <workItem from="1498153057789" duration="19000" />
-      <workItem from="1498573989478" duration="123000" />
+      <workItem from="1498573989478" duration="168000" />
+      <workItem from="1499094116642" duration="2640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86683000" />
+    <option name="totallyTimeSpent" value="89368000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18645833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3736952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328934" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,20 +300,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Aufgabe 2/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/script.js" />
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/script.js" />
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/Aufgabe 3/script.js" />
-    <entry file="file://$PROJECT_DIR$/Aufgabe 3/pointsC.txt" />
     <entry file="file://$PROJECT_DIR$/Aufgabe 3/pointsB.txt" />
     <entry file="file://$PROJECT_DIR$/Aufgabe 3/pointsA.txt" />
     <entry file="file://$PROJECT_DIR$/Aufgabe 3/index.html" />
@@ -518,13 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Aufgabe 5/Teil2_Framework(s)/mainpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Aufgabe 5/Teil2_Framework(s)/imprint.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -546,70 +499,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Aufgabe 5/Teil2_Framework(s)/map.html">
+    <entry file="file://$USER_HOME$/Downloads/data (7).geojson">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
-          <caret line="105" column="28" lean-forward="false" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aufgabe 5/Teil2_Framework(s)/mainpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
           <folding>
-            <marker date="1498574112967" expanded="true" signature="31:5660" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="38:2287" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="1577:1721" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="1812:1968" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="2293:5538" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="2300:2414" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="2452:3918" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="2486:3885" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="2594:3050" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="2750:2976" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="3210:3848" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="3250:3436" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="3489:3833" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="3943:5498" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="4010:5467" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="4081:4258" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="4137:4247" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="4303:5459" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="4358:5448" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="4447:4763" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="4607:4743" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="4942:5072" ph="..." />
-            <marker date="1498574112967" expanded="true" signature="5270:5394" ph="..." />
+            <marker date="1498056290423" expanded="true" signature="31:3525" ph="..." />
+            <marker date="1498056290423" expanded="true" signature="38:1268" ph="..." />
+            <marker date="1498056290423" expanded="true" signature="1274:3517" ph="..." />
+            <marker date="1498056290423" expanded="true" signature="1281:1395" ph="..." />
+            <marker date="1498056290423" expanded="true" signature="1433:2633" ph="..." />
+            <marker date="1498056290423" expanded="true" signature="1467:2600" ph="..." />
+            <marker date="1498056290423" expanded="true" signature="1575:2031" ph="..." />
+            <marker date="1498056290423" expanded="true" signature="1731:1957" ph="..." />
+            <marker date="1498056290423" expanded="true" signature="2191:2563" ph="..." />
+            <marker date="1498056290423" expanded="true" signature="2231:2417" ph="..." />
+            <marker date="1498056290423" expanded="true" signature="2470:2548" ph="..." />
+            <marker date="1498056290423" expanded="true" signature="2667:3508" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/data (3).geojson">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Aufgabe 5/Teil2_Framework(s)/UI_script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
+        <state relative-caret-position="928">
           <caret line="77" column="1" lean-forward="false" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
-          <folding>
-            <marker date="1498574083570" expanded="false" signature="0:42" ph="/** Created by Basti on 27.06.2017. ...*/" />
-            <marker date="1498574083570" expanded="true" signature="43:200" ph="/** &quot;gegeinander draggen&quot; implementation ...*/" />
-            <marker date="1498574083570" expanded="true" signature="251:1849" ph="{...}" />
-            <marker date="1498574083570" expanded="true" signature="276:698" ph="{...}" />
-            <marker date="1498574083570" expanded="true" signature="408:690" ph="{...}" />
-            <marker date="1498574083570" expanded="true" signature="494:678" ph="{...}" />
-            <marker date="1498574083570" expanded="true" signature="733:1756" ph="{...}" />
-            <marker date="1498574083570" expanded="true" signature="913:1161" ph="{...}" />
-            <marker date="1498574083570" expanded="true" signature="1211:1748" ph="{...}" />
-            <marker date="1498574083570" expanded="true" signature="1522:1708" ph="{...}" />
-            <marker date="1498574083570" expanded="true" signature="1628:1694" ph="{...}" />
-            <marker date="1498574083570" expanded="true" signature="1780:1847" ph="{...}" />
-            <marker date="1498574083570" expanded="true" signature="1853:1938" ph="/** Functions used to active and deactivate the draggable property of JQueryUI ...*/" />
-            <marker date="1498574083570" expanded="true" signature="1958:2158" ph="{...}" />
-            <marker date="1498574083570" expanded="true" signature="1978:2154" ph="{...}" />
-            <marker date="1498574083570" expanded="true" signature="2010:2114" ph="{&quot;alsoResizeReverse&quot;: &quot;##draggable, ##find_btn, ##export&quot;...}" />
-            <marker date="1498574083570" expanded="true" signature="2179:2355" ph="{...}" />
-            <marker date="1498574083570" expanded="true" signature="2199:2351" ph="{...}" />
-            <marker date="1498574083570" expanded="true" signature="2231:2307" ph="{...}" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/data (10).geojson">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/data (14).geojson">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/data (15).geojson">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aufgabe 5/Teil2_Framework(s)/map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="105" column="28" lean-forward="false" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Aufgabe 5/Teil2_Framework(s)/map_script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+        <state relative-caret-position="578">
+          <caret line="51" column="85" lean-forward="false" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aufgabe 6/map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aufgabe 6/UI_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Aufgabe 6/map_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
