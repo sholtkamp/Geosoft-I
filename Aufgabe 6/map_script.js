@@ -39,17 +39,26 @@ map.on('draw:created', function(e) {
 function exportGeoJSON(){
 
     document.getElementById('export').onclick = function(e) {
-        var gJ_name = prompt("Please enter GeoJSON's name", "ichBinUnkreativ");
+
 
         // Extract GeoJson from featureGroup
         var data = drawnItems.toGeoJSON();
 
         // Stringify the GeoJson
-        var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
+        var convertedData = JSON.stringify(data);
+
+        for (i = 0; i < convertedData.length; i++) {
+            if (convertedData.search("{}") != -1) {
+                var gJ_name = prompt("Please enter GeoJSON's name", "ichBinUnkreativ");
+                var namedData = convertedData.slice(0, (convertedData.search("{}") + 1)) + "\"name\"" + ": " + "\"" + gJ_name + "\"" + convertedData.slice((convertedData.search("{}") + 1));
+                console.log(namedData);
+            }
+            else break;
+        }
 
         // Create export
-       document.getElementById('export').setAttribute('href', 'data:' + convertedData);
-       document.getElementById('export').setAttribute('download',gJ_name + '.geojson');
+       document.getElementById('export').setAttribute('href', 'data:' + namedData);
+       document.getElementById('export').setAttribute('download','data.geojson');
     };
 }
 
