@@ -1,0 +1,49 @@
+body {
+    background-image: url("../img/background_light.jpg");
+}
+
+html, body {
+    height : 100%;
+}
+
+/** map page */
+#map {
+    position: absolute;
+    height:50vw;
+    max-height: 600px;
+    width:50vw;
+    max-width: 600px;
+}
+
+#move {
+    margin-right: 10px;
+}
+
+#export, #find_btn {
+    top: 10px;
+}
+
+#export {
+    color: white;
+}
+
+/* main page */
+#globe_pic {
+    max-height: 20%;
+    max-width: 20%;
+}
+
+.mainpage_container {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+/* imprint */
+#disclaimer {
+    background: rgba(255, 255, 255, 0.3);
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
